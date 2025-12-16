@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Banker's Algorithm Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Result</h1>
+        <div class="result-box">
+            {% if safe %}
+                <p class="safe">✅ The system is in a SAFE state.</p>
+                <p><strong>Safe Sequence:</strong> {{ seq }}</p>
+            {% else %}
+                <p class="unsafe">⚠️ The system is in an UNSAFE state.</p>
+            {% endif %}
+        </div>
+        <div style="text-align:center;">
+            <a href="/">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
